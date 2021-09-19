@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "const": "^1.0.0",
+    "node-notifier": "^10.0.0",
+    "website-scraper": "^4.2.3"
+  }
+}
