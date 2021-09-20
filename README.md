@@ -1,6 +1,6 @@
 # scripthook_dl
 
-Scripthook_dl was a side project I created because I was too goddamn lazy to keep checking the scripthook website to see if Scripthook V had been updated to the latest version.
+Scripthook_dl was a side project I created because I was too goddamn lazy to keep checking the Scripthook website to see if Scripthook V had been updated to the latest version.
 
 ## How it works
 
