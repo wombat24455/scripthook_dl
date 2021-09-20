@@ -5,6 +5,7 @@ const path = require("path");
 const notifier = require('node-notifier');
 /* modules needed */
 
+
 /* variables */
 const folder = 'scripthookv';
 const ScriptHookWebsite = 'http://www.dev-c.com/gtav/scripthookv/';
@@ -31,6 +32,7 @@ const executeLast = () => {
 /* prevents function speed related errors */
 
 /* deletes scripthook folder if already exists */
+
 function check() {
   fs.access(`./${folder}`, function(error) {
     if (error) {
@@ -46,6 +48,7 @@ function check() {
     }
   })
 }
+
 /* deletes scripthook folder if already exists */
 
 

@@ -1,0 +1,1 @@
+This folder is where the Scripthook files will be placed, this txt file is not required, so you can delete it if you want.
