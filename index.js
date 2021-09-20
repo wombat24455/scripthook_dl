@@ -8,7 +8,7 @@ const notifier = require('node-notifier');
 /* variables */
 const folder = 'scripthookv';
 const ScriptHookWebsite = 'http://www.dev-c.com/gtav/scripthookv/';
-const full_dir = '%USERPROFILE%\\Desktop\\Everything\\Coding\\scripthook_dl\\latest_ver';
+const verDirectory = '.\\latest_ver';
 /* variables */
 
 /* prevents function speed related errors */
@@ -32,7 +32,7 @@ const executeLast = () => {
 
 /* deletes scripthook folder if already exists */
 function check() {
-  fs.access(`./scripthookv`, function(error) {
+  fs.access(`./${folder}`, function(error) {
     if (error) {
 
     } else {
@@ -59,7 +59,7 @@ function downloader() {
     recursive: true,
     maxDepth: 1,
   });
-  
+
   console.timeEnd(`Downloaded files from ${ScriptHookWebsite}`);
 }
 /* downloads the files from ScriptHookWebsite */
@@ -67,22 +67,22 @@ function downloader() {
 /* finds and moves scripthook */
 function poggers() {
   console.time(`Script Hook found`);
-  var pogFiles = fs.readdirSync('./scripthookv').filter(file => file.endsWith('.zip'));
+  var pogFiles = fs.readdirSync(`./${folder}`).filter(file => file.endsWith('.zip'));
   var strpogFiles = pogFiles.toString();
   var pogFile = strpogFiles.slice(0, 26);
   console.timeEnd(`Script Hook found`);
   /* looks for scripthook */
 
   /* moves scripthook to ./latest_ver */
-  console.time(`${pogFile} successfully moved to latest_ver`);
-  const pathToFile = path.join("./scripthookv", pogFile);
+  console.time(`${pogFile} successfully moved to ${folder}`);
+  const pathToFile = path.join(`./${folder}`, pogFile);
   const pathToNewDestination = path.join(__dirname, "latest_ver", pogFile);
 
   fs.copyFile(pathToFile, pathToNewDestination, function (err) {
     if (err) {
       throw err
     } else {
-      console.timeEnd(`${pogFile} successfully moved to latest_ver`);
+      console.timeEnd(`${pogFile} successfully moved to ${folder}`);
     }
   })
   /* moves scripthook to ./latest_ver */
@@ -118,7 +118,7 @@ function listnumfiles() {
       case 1:
         notifier.notify({
           title: 'Script Hook V auto-downloader',
-          message: 'Daily check completed',
+          message: 'Daily check completed, no new versions downloaded',
           icon: path.join(__dirname, 'img/cashmoney.png'),
           sound: true,
           wait: false,
@@ -159,7 +159,7 @@ function listnumfiles() {
 /* opens file dir */
 function openDir() {
   console.log("opening dir...")
-  require('child_process').exec(`start ${full_dir}`);
+  require('child_process').exec(`start ${verDirectory}`);
   console.log("done");
 }
 /* opens file dir */
