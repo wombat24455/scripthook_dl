@@ -7,7 +7,7 @@ const ListNumModule = require('./funcs/list');
 
 /* prevents function speed related errors */
 const executeFirst = () => {
-  //CheckModule.check();
+  CheckModule.check();
   DlModule.downloader();
 }
 const executeSecond = () => {
@@ -28,4 +28,4 @@ setTimeout(executeFirst, 0);
 setTimeout(executeSecond, 2000);
 setTimeout(executeThird, 3000);
 setTimeout(executeFourth, 4000)
-setTimeout(executeLast, 6000);
+setTimeout(executeLast, 5000);

@@ -18,12 +18,14 @@ Notification for when a new version has been found & downloaded:
 
 - [Node.js](https://nodejs.org/en/) version >= 12.17.0
 
-### Dependancy requirements
+### Dependencies required
 
 - [node-notifier](https://www.npmjs.com/package/node-notifier) version >= ^10.0.0
 - [website-scraper](https://www.npmjs.com/package/website-scraper): ^4.2.3
 
-You can also check the dependency requirements by checking out the npm pages which have been provided.
+You can also check the dependency requirements [here](https://github.com/website-scraper/node-website-scraper) and [here](https://github.com/mikaelbr/node-notifier).
+
+Or you can have a look in [`package.json`](package.json) for the dependencies required.
 
 ## Usage
 

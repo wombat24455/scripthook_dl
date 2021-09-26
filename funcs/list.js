@@ -18,7 +18,7 @@ module.exports = {
                 notifier.notify({
                   title: 'Script Hook V auto-downloader',
                   message: 'Daily check completed, no new versions downloaded',
-                  icon: path.join(__dirname, 'img/cashmoney.png'),
+                  icon: `${vars.icon}`,
                   sound: true,
                   wait: false,
                   appID: 'joe nuts',
@@ -28,22 +28,24 @@ module.exports = {
                 var pogFiles2 = fs.readdirSync(`./${vars.verDirectory}`).filter(file => file.endsWith('.zip')); // finds files with the .zip extention
                 strpogFiles2 = pogFiles2.toString();
                 old_ver = strpogFiles2.slice(12, 22);
-                const oldFile = `./${vars.verDirectory}/ScriptHookV_${old_ver}.zip`;
+                const oldFile = `${vars.verDirectory}/ScriptHookV_${old_ver}.zip`;
                 new_ver = strpogFiles2.slice(39, 49);
+
                 console.log(`Old version: ${old_ver}\nNew version: ${new_ver}`);
-                console.time(`Deleting ${oldFile}`);
+                console.time(`Deleting version: ${old_ver}`);
+
                 if (old_ver < new_ver) {
                   try {
                     fs.unlinkSync(oldFile); // deletes the older version of scripthook
-                    console.log("Successfully deleted the file.");
                   } catch (err) {
                     throw err
                   }
-                  console.timeEnd(`Deleting ${oldFile}`);
+                  console.timeEnd(`Deleting version: ${old_ver}`);
+
                   notifier.notify({
                     title: 'Script Hook V auto-downloader',
                     message: `A new version of script hook has been released:\n${old_ver} to ${new_ver}`,
-                    icon: path.join(__dirname, 'img/cashmoney.png'),
+                    icon: `${vars.icon}`,
                     sound: true,
                     wait: false,
                     appID: 'joe nuts',
