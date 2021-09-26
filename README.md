@@ -21,7 +21,7 @@ Notification for when a new version has been found & downloaded:
 ### Dependencies required
 
 - [node-notifier](https://www.npmjs.com/package/node-notifier) version >= ^10.0.0
-- [website-scraper](https://www.npmjs.com/package/website-scraper): ^4.2.3
+- [website-scraper](https://www.npmjs.com/package/website-scraper) version ^4.2.3
 
 You can also check the dependency requirements [here](https://github.com/website-scraper/node-website-scraper) and [here](https://github.com/mikaelbr/node-notifier).
 
