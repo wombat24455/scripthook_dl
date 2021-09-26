@@ -1,1 +1,1 @@
-This folder is where the Scripthook files will be placed, this txt file is not required, so you can delete it if you want.
+This folder is where the Scripthook files will be placed, this text file is not required and will be deleted after this program is run for the first time.

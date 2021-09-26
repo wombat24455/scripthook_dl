@@ -16,10 +16,17 @@ Notification for when a new version has been found & downloaded:
 
 ## Requirements
 
-- Node.js version >= 12.17.0
+- [Node.js](https://nodejs.org/en/) version >= 12.17.0
 
-You can also check the dependency requirements [here](https://github.com/website-scraper/node-website-scraper) and [here](https://github.com/mikaelbr/node-notifier).
+### Dependancy requirements
+
+- [node-notifier](https://www.npmjs.com/package/node-notifier) version >= ^10.0.0
+- [website-scraper](https://www.npmjs.com/package/website-scraper): ^4.2.3
+
+You can also check the dependency requirements by checking out the npm pages which have been provided.
 
 ## Usage
 
-All you need to do is run the `start.bat` file and let it do its thing.
+All you need to do is run the [`start.bat`](start.bat) file and let it do its thing.
+
+(WIP) You can also use the non-notification version with the [pterodactyl panel](https://pterodactyl.io/) as long as you have the [`discord.js`](https://github.com/parkervcp/eggs/tree/master/bots/discord/discord.js) egg available.

@@ -6,7 +6,7 @@ module.exports = {
     {
         console.time(`Successfully deleted directory: ${vars.folder}`);
         try {
-          fs.rm(folder, { recursive: true }, (err) => {
+          fs.rm(vars.folder, { recursive: true }, (err) => {
             if (err) {
                 throw err;
             }

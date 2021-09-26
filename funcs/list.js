@@ -25,10 +25,10 @@ module.exports = {
                 })
                 break;
               case 2:
-                var pogFiles2 = fs.readdirSync(`../${vars.folder}`).filter(file => file.endsWith('.zip')); // finds files with the .zip extention
+                var pogFiles2 = fs.readdirSync(`./${vars.verDirectory}`).filter(file => file.endsWith('.zip')); // finds files with the .zip extention
                 strpogFiles2 = pogFiles2.toString();
                 old_ver = strpogFiles2.slice(12, 22);
-                const oldFile = `../latest_ver/ScriptHookV_${old_ver}.zip`;
+                const oldFile = `./${vars.verDirectory}/ScriptHookV_${old_ver}.zip`;
                 new_ver = strpogFiles2.slice(39, 49);
                 console.log(`Old version: ${old_ver}\nNew version: ${new_ver}`);
                 console.time(`Deleting ${oldFile}`);

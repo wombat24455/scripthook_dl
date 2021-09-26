@@ -6,11 +6,10 @@ module.exports = {
     {
         fs.access(`../${vars.folder}`, function(error) {
             if (error) {
-        
             } else {
               console.log(`Folder ${vars.folder} already exists... deleting...`);
         
-              fs.rm(vars.folder, { recursive: true }, (err) => {
+              fs.rm(`../${vars.folder}`, { recursive: true }, (err) => {
                 if (err) {
                     throw err;
                 }

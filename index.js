@@ -7,7 +7,7 @@ const ListNumModule = require('./funcs/list');
 
 /* prevents function speed related errors */
 const executeFirst = () => {
-  CheckModule.check();
+  //CheckModule.check();
   DlModule.downloader();
 }
 const executeSecond = () => {
